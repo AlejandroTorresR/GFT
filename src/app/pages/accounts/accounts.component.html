@@ -1,0 +1,48 @@
+<div class="floating" (click)="newCard()">
+	<i class="material-icons">add</i>
+</div>
+<div class="mt-4">
+	<div class="col-12" *ngIf="!accounts.length">
+		<div class="text-center empty-list">
+			<i class="material-icons">inbox</i><br>
+			<p>No tienes cuentas registradas.</p>
+		</div>
+	</div>
+	<div class="col-12" *ngIf="accounts.length">
+		<div class="row">
+			<div class="col-12 col-md-4 mb-4">
+				<div class="card animated fadeInUp">
+					<div class="card-header">Depositos</div>
+				  <div class="card-body">
+				  	<div class="data">{{selected.deposits}}</div>
+				  </div>
+				</div>
+			</div>
+			<div class="col-12 col-md-4 mb-4">
+				<div class="card animated fadeInUp">
+					<div class="card-header">Retiros</div>
+				  <div class="card-body">
+				    <div class="data">{{selected.withdrawals}}</div>
+				  </div>
+				</div>
+			</div>
+			<div class="col-12 col-md-4 mb-4">
+				<div class="card animated fadeInUp">
+				  <div class="card-header">Balance</div>
+				  <div class="card-body">
+				    <div class="data">{{selected.balance | currency}}</div>
+				  </div>
+				</div>
+			</div>
+			<div class="col-12 col-md-6" *ngFor="let a of accounts; let i = index">
+				<div class="new-card card mb-4 animated fadeInUp text-white bg-dark" [class.border-primary]="a._id == selected._id">
+					<img src="assets/gft-logo.svg" alt="gft-logo" class="card-logo">
+					<div class="card-body" [class.active]="a._id == selected._id" (click)="selected = a">
+						<div class="font-weight-bold">{{a.name}}</div>
+						<div class="badge badge-secondary">{{a.type}}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

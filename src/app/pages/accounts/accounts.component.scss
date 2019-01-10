@@ -1,0 +1,99 @@
+.form-signin {
+  max-width: 330px;
+  margin: auto;
+  padding: 16px;
+  width: 100%;
+  .form-container{
+    background-color: #ffffff;
+    padding: 16px;
+    border-radius: 4px;
+  }
+  .form-control {
+    position: relative;
+    height: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .first {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .last {
+    margin-bottom: 12px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .input-group-text{
+    outline: none;
+    cursor: pointer;
+    background-color: #2196f3;
+    color: #ffffff;
+  }
+}
+
+.img-logo{
+  margin: 0px auto;
+  width: 100%;
+  padding: 16px 32px;
+}
+
+.table {
+  th{
+    border-top: none;
+  }
+  td{
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 0;
+  }
+  tbody tr:hover{
+    background-color: #fafafa;
+    cursor: default;
+  }
+}
+
+.actions{
+  width: 72px;
+}
+
+.empty-list{
+  width: 100%;
+  border: dashed #9E9E9E;
+  border-radius: 12px;
+  color: #9E9E9E;
+  font-weight: bold;
+  i{
+    padding: 16px;
+    font-size: 4rem;
+  }
+}
+
+.data{
+  font-size: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.new-card{
+  background: url('../../../assets/card.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  .card-logo{
+    width: 180px;
+    background-color: #fff;
+  }
+  .card-body{
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+    &:hover{
+      box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+    }
+    &.active{
+      box-shadow: 0px 3px 5px -1px rgba(0, 0, 255, 1), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+    }
+  }
+}

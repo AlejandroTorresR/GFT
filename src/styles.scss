@@ -1,0 +1,102 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body{
+	position: relative;
+	background-color: #efefef !important;
+	height: 100%;
+}
+
+$color-one: #203e7e;
+$color-two: #0098B0;
+$color-three: #E5F4F7;
+
+.my-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.bg-main{ background-color: $color-one !important; }
+.padding16{ padding: 16px; }
+.margin16h{
+	margin-left: 16px;
+    margin-right: 16px;
+}
+.margin-left{margin-left: 32px;}
+
+.verticalHeight{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.btn-gft{
+	background-color: $color-one !important;
+	color: #ffffff !important;
+    &:hover{
+      background-color: #3c5282 !important;
+    }
+}
+
+.parent{
+    position: absolute;
+    display: table;
+    width: 100%;
+    height: 100%;
+    &.dashboard{
+        height: calc(100vh - 60px) !important;
+    }
+    .div-row{
+        display: table-row;
+        width: 100%;
+        .div-cell{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .div-cell-top{
+            display: table-cell;
+            vertical-align: top;
+        }
+        .div-cell-bottom{
+            display: table-cell;
+            vertical-align: bottom;
+        }
+        .div-cell-sidebar{
+            display: table-cell;
+            vertical-align: top;
+            width: 1%;
+        }
+    }
+}
+
+.action-btn{
+    cursor: pointer;
+    padding: 4px;
+}
+
+.floating{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: fixed;
+    right: 16px;
+    bottom: 20px;
+    cursor: pointer;
+    line-height: 64px;
+    text-align: center;
+    color: #ffffff;
+    background-color: $color-one;
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+    z-index: 1;
+    i{
+        font-size: 28px;
+    }
+}
+
+.floating:hover{
+    background-color: $color-two;
+}
+
+@media screen and (max-width: 767px) {
+    .hide-mobile{
+        display: none !important;
+    }
+}

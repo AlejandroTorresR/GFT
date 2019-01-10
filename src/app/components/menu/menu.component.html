@@ -1,0 +1,23 @@
+<ul class="sidebar" [class.show]="_GFTService.show === true">
+	<div class="text-center profile" *ngIf="_GFTService.decoded">
+		<div class="image-upload mb-3">
+	    <label for="file-input">
+	        <img src="{{image}}" class="rounded-circle"/>
+	    </label>
+	    <input id="file-input" type="file" (change)="pictureChange($event)"/>
+		</div>
+		<span class="badge badge-secondary">{{_GFTService.decoded.firstname}} {{_GFTService.decoded.lastname}}</span>
+	</div>
+  <li *ngFor="let m of menu" [class.close-row]="m.icon == 'power_settings_new'">
+	  <a href="javascript:void(0)" routerLinkActive="active" routerLink="{{m.url}}">
+	  	<i class="material-icons">{{m.icon}}</i>
+		<span>{{m.name}}</span>
+	  </a>
+  </li>
+  <li class="close-row">
+	  <a href="javascript:void(0)" routerLinkActive="active" (click)=logout()>
+	  	<i class="material-icons">power_settings_new</i>
+		<span>Cerrar sesión</span>
+	  </a>
+  </li>
+</ul>

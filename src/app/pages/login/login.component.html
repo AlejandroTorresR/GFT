@@ -1,0 +1,37 @@
+<div class="bg-login verticalHeight">
+
+	<form class="form-signin" [formGroup]="userRegister" (ngSubmit)="registerUser()" *ngIf="subscribe">
+		<div class="form-container">
+			<div class="img-logo">
+				<img src="assets/gft-logo.svg" alt="gft-logo">
+			</div>
+			<div class="padding16 animated fadeIn">
+				<input type="email" formControlName="email" class="form-control first" placeholder="E-mail">
+				<input type="password" formControlName="password" class="form-control last" placeholder="Contraseña">
+
+				<input type="text" formControlName="firstname" class="form-control first" placeholder="Nombre">
+				<input type="text" formControlName="lastname" class="form-control last" placeholder="Apellido">
+
+				<button class="btn-gft btn btn-lg btn-block" type="submit" [disabled]="!userRegister.valid">Registrarme</button>
+				<hr>
+				<button class="btn btn-block" type="button" (click)="subscribe = false">Iniciar Sesión</button>
+			</div>
+		</div>
+	</form>
+
+	<form class="form-signin" [formGroup]="userLogin" (ngSubmit)="loginUser()" *ngIf="!subscribe">
+		<div class="form-container">
+			<div class="img-logo">
+				<img src="assets/gft-logo.svg" alt="gft-logo">
+			</div>
+			<div class="padding16 animated fadeIn">
+				<input type="email" formControlName="email" class="form-control first" placeholder="E-mail">
+				<input type="password" formControlName="password" class="form-control last" placeholder="Contraseña">
+				<button class="btn-gft btn btn-lg btn-block" type="submit" [disabled]="!userLogin.valid">Iniciar Sesión</button>
+				<hr>
+				<button class="btn btn-block" type="button" (click)="subscribe = true">Registrarme</button>
+			</div>
+		</div>
+	</form>
+
+</div>

@@ -1,0 +1,40 @@
+.form-signin {
+  max-width: 330px;
+  margin: auto;
+  padding: 16px;
+  width: 100%;
+  .form-container{
+    background-color: #ffffff;
+    padding: 16px;
+    border-radius: 4px;
+  }
+  .form-control {
+    position: relative;
+    height: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .first {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .last {
+    margin-bottom: 12px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .input-group-text{
+    outline: none;
+    cursor: pointer;
+    background-color: #2196f3;
+    color: #ffffff;
+  }
+}
+
+.img-logo{
+  margin: 0px auto;
+  width: 100%;
+  padding: 16px 32px;
+}

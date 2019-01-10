@@ -1,0 +1,55 @@
+.form-signin {
+  max-width: 330px;
+  margin: auto;
+  padding: 16px;
+  width: 100%;
+  z-index: 1;
+  .form-container{
+    background-color: #ffffff;
+    border: outset;
+  }
+  .form-control {
+    position: relative;
+    height: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .first {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .last {
+    margin-bottom: 12px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .input-group-text{
+    outline: none;
+    cursor: pointer;
+    background-color: #2196f3;
+    color: #ffffff;
+  }
+}
+
+.img-logo{
+  margin: 0px auto;
+  width: 100%;
+}
+
+.bg-login::after{
+  content: "";
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+  background: url('../../../assets/gft-build.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%);
+}
