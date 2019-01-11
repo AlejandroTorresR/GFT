@@ -27,14 +27,16 @@ export class AccountsComponent implements OnInit {
   ngOnInit() {
     this.getAccounts()
     this.getTypeCards()
-    if(this.accounts){
-      this.selected = this.accounts[0]
-    }
   }
 
   getAccounts(){
+    let result;
     this._GFTService.getBase('accounts').subscribe(res=>{
-      this.accounts = res;
+      result = res;
+      this.accounts = result.response;
+      if(this.accounts){
+        this.selected = this.accounts[0]
+      }
     })
   }
 
